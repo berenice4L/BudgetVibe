@@ -1,3 +1,4 @@
+Github Link: https://github.com/berenice4L/BudgetVibe
 
 # 💸 BudgetVibe – Track, Save, Thrive
 BV is a next-gen budgeting app tailored for the modern user. It combines cutting-edge financial tracking with a sleek, dynamic user experience to make budgeting simple, engaging, and effective. With innovative features like gamification, smart notifications, and interactive visuals, BudgetVibe is designed to make financial management effortless.
@@ -57,4 +58,4 @@ Inspired by apps like:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/BudgetVibe.git
+   git clone https://github.com/berenice4L/BudgetVibe
