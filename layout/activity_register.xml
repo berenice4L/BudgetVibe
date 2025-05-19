@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.RegisterActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- Background Image -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mbackground" />
+
+        <!-- Semi-transparent Overlay -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#AA000000" />
+
+        <!-- Scrollable Form -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:fillViewport="true"
+            android:layout_marginBottom="200dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Logo -->
+                <ImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:src="@drawable/ic_budget_vibe_logo" />
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register"
+                    android:textColor="@color/bv_primary"
+                    android:textSize="28sp"
+                    android:fontFamily="@font/bubblegum_sans"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Username Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/bv_surface"
+                    app:boxStrokeColor="@color/bv_primary"
+                    app:hintTextColor="@color/bv_primary"
+                    app:helperTextTextColor="@color/bv_gray_800"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/usernameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/username"
+                        android:fontFamily="@font/bubblegum_sans"
+                        android:textColor="@color/bv_on_surface"
+                        android:textColorHint="@color/bv_gray_600" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Email Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/bv_surface"
+                    app:boxStrokeColor="@color/bv_primary"
+                    app:hintTextColor="@color/bv_primary"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:fontFamily="@font/bubblegum_sans"
+                        android:textColor="@color/bv_on_surface"
+                        android:textColorHint="@color/bv_gray_600" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/bv_surface"
+                    app:boxStrokeColor="@color/bv_primary"
+                    app:passwordToggleTint="@color/bv_primary"
+                    app:hintTextColor="@color/bv_primary"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:fontFamily="@font/bubblegum_sans"
+                        android:textColor="@color/bv_on_surface"
+                        android:textColorHint="@color/bv_gray_600" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Confirm Password Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/bv_surface"
+                    app:boxStrokeColor="@color/bv_primary"
+                    app:passwordToggleTint="@color/bv_primary"
+                    app:hintTextColor="@color/bv_primary"
+                    android:layout_marginBottom="24dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/confirmPasswordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/confirm_password"
+                        android:inputType="textPassword"
+                        android:fontFamily="@font/bubblegum_sans"
+                        android:textColor="@color/bv_on_surface"
+                        android:textColorHint="@color/bv_gray_600" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Register Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/registerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/bv_primary"
+                    android:gravity="center"
+                    android:text="@string/register"
+                    android:textColor="@color/bv_on_primary"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bubblegum_sans"
+                    app:cornerRadius="28dp"
+                    app:elevation="6dp" />
+
+                <!-- Login Redirect -->
+                <TextView
+                    android:id="@+id/loginRedirectText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_have_account_login"
+                    android:textColor="@color/bv_primary"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/bubblegum_sans"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@color/bv_gray_300" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Fixed Password Requirements Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/bv_surface"
+            android:layout_gravity="bottom"
+            android:elevation="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_requirements"
+                android:textColor="@color/bv_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/bubblegum_sans"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/password_requirement_1"
+                android:fontFamily="@font/bubblegum_sans"
+                android:textColor="@color/bv_gray_800"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/password_requirement_2"
+                android:fontFamily="@font/bubblegum_sans"
+                android:textColor="@color/bv_gray_800"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/password_requirement_3"
+                android:fontFamily="@font/bubblegum_sans"
+                android:textColor="@color/bv_gray_800" />
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

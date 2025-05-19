@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rbackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="17dp"
+                app:cardBackgroundColor="@color/bv_surface"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/bv_primary_light"
+                app:strokeWidth="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp"
+                    android:layout_margin="24dp">
+
+
+
+                    <ImageView
+                        android:id="@+id/editProfileButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+
+                        android:src="@drawable/ic_edit"
+                        android:background="@drawable/circle_primary"
+                        android:padding="8dp"
+                        android:contentDescription="@string/edit_profile" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- User Info -->
+            <TextView
+                android:id="@+id/userNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Hlulani Mfomande"
+                android:textColor="@color/bv_on_surface"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userEmailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:text="LanieMfo@budgetvibe.com"
+                android:textColor="@color/bv_gray_600"
+                android:textSize="14sp" />
+
+            <!-- Stats Cards Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="@color/bv_surface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="19dp"
+                            android:layout_height="43dp"
+                            android:text="42"
+                            android:textColor="@color/bv_primary"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/streak_days"
+                            android:textColor="@color/bv_gray_600"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:cardBackgroundColor="@color/bv_surface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8"
+                            android:textColor="@color/bv_primary"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/badges_earned"
+                            android:textColor="@color/bv_gray_600"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Account Settings Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:cardBackgroundColor="@color/bv_surface"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/account_settings"
+                        android:textColor="@color/bv_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/bv_surface"
+                        android:drawableStart="@drawable/ic_security"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/bv_primary"
+                        android:gravity="start|center_vertical"
+                        android:paddingVertical="16dp"
+                        android:text="@string/security"
+                        android:textColor="@color/bv_on_surface"
+                        app:cornerRadius="8dp"
+                        style="@style/Widget.Material3.Button.TextButton" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/bv_surface"
+                        android:drawableStart="@drawable/ic_notifications"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/bv_primary"
+                        android:gravity="start|center_vertical"
+                        android:paddingVertical="16dp"
+                        android:text="@string/notifications"
+                        android:textColor="@color/bv_on_surface"
+                        app:cornerRadius="8dp"
+                        style="@style/Widget.Material3.Button.TextButton" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/bv_surface"
+                        android:drawableStart="@drawable/ic_help"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/bv_primary"
+                        android:gravity="start|center_vertical"
+                        android:paddingVertical="16dp"
+                        android:text="@string/help_support"
+                        android:textColor="@color/bv_on_surface"
+                        app:cornerRadius="8dp"
+                        style="@style/Widget.Material3.Button.TextButton" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@color/bv_gray_200" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/bv_surface"
+                        android:drawableStart="@drawable/ic_logout"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/bv_error"
+                        android:gravity="start|center_vertical"
+                        android:paddingVertical="16dp"
+                        android:text="@string/logout"
+                        android:textColor="@color/bv_error"
+                        app:cornerRadius="8dp"
+                        style="@style/Widget.Material3.Button.TextButton" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

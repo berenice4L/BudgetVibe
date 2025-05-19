@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.PaymentActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mbackground" />
+
+        <!-- Semi-transparent Overlay -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#AA000000" />
+
+        <!-- Content ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Logo -->
+
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="24dp"
+                    android:text="New Expense"
+                    android:textColor="@color/bv_primary"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/bubblegum_sans" />
+
+
+
+                <!-- Username/Email Input -->
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/categorySpinner"
+                    android:background="@drawable/fiel_background"
+                    android:padding="16dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginBottom="20dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/usernameEmailInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    app:boxBackgroundColor="@color/bv_surface"
+                    app:boxStrokeColor="@color/bv_primary"
+                    app:hintTextColor="@color/bv_primary"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/expenseAmountTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Amount"
+                        android:inputType="numberDecimal"
+                        android:fontFamily="@font/bubblegum_sans"
+                        android:textColor="@color/bv_on_surface"
+                        android:textColorHint="@color/bv_gray_600" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password Input -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:id="@+id/categoryChosen"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/dateTextView"
+                        android:layout_width="228dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/fiel_background"
+                        android:backgroundTint="@color/white"
+                        android:padding="15dp"
+                        android:text="Date" />
+
+                    <ImageView
+                        android:id="@+id/calenderImageView"
+                        android:layout_width="10dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_calendar" />
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:boxBackgroundColor="@color/bv_surface"
+                    app:boxStrokeColor="@color/bv_primary"
+                    app:hintTextColor="@color/bv_primary"
+                    app:passwordToggleTint="@color/bv_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/descriptionTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/bubblegum_sans"
+                        android:hint="Description"
+                        android:inputType="text"
+                        android:textColor="@color/bv_on_surface"
+                        android:textColorHint="@color/bv_gray_600" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Forgot Password -->
+                >
+
+                <!-- Login Button -->
+
+                <Button
+                    android:id="@+id/saveExpenseButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/bv_primary"
+                    android:fontFamily="@font/bubblegum_sans"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textColor="@color/bv_on_primary"
+                    android:textSize="18sp"
+                    app:cornerRadius="28dp"
+                    app:elevation="6dp" />
+
+                <!-- Progress Bar -->
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/bv_gray_300" />
+
+                <!-- Register Redirect -->
+
+                <TextView
+                    android:id="@+id/addPhotoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/bubblegum_sans"
+                    android:text="Add a photo"
+                    android:textColor="@color/bv_primary"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/photoImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/ic_add_photo" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

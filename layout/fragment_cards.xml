@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/bv_background"
+    tools:context=".CardsFragment">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:navigationIcon="@drawable/baseline_arrow_back_24"
+                app:title="@string/your_cards"
+                app:titleTextColor="@color/bv_on_surface" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Card Carousel -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cardsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:orientation="horizontal"
+                    android:clipToPadding="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+                <!-- Card Actions -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/addCardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/bv_surface"
+                        android:drawableStart="@drawable/ic_add"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/bv_primary"
+                        android:text="@string/add_card"
+                        android:textColor="@color/bv_primary"
+                        app:cornerRadius="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/virtualCardButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="@color/bv_surface"
+                        android:drawableStart="@drawable/ic_virtual_card"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/bv_primary"
+                        android:text="@string/virtual_card"
+                        android:textColor="@color/bv_primary"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+
+                <!-- Card Management -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/card_management"
+                    android:textColor="@color/bv_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/freezeCardButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:backgroundTint="@color/bv_surface"
+                        android:drawableStart="@drawable/ic_freeze"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/bv_primary"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/freeze_card"
+                        android:textColor="@color/bv_on_surface"
+                        app:cornerRadius="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/transactionLimitsButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:backgroundTint="@color/bv_surface"
+                        android:drawableStart="@drawable/ic_limit"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/bv_primary"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/set_limits"
+                        android:textColor="@color/bv_on_surface"
+                        app:cornerRadius="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cardDetailsButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/bv_surface"
+                        android:drawableStart="@drawable/ic_details"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/bv_primary"
+                        android:gravity="start|center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/view_details"
+                        android:textColor="@color/bv_on_surface"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>
